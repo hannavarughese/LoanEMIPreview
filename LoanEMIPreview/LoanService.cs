@@ -72,8 +72,7 @@ namespace LoanEMIPreview
 
             loan.TotalInterest = loan.TotalRepayment - principal;
 
-            Console.WriteLine();
-            Console.WriteLine("EMI Calculated Successfully!");
+            Console.WriteLine("\nEMI calculated successfully.");
         }
 
         public void DisplayLoanSummary(Loan loan)
@@ -108,5 +107,48 @@ namespace LoanEMIPreview
 
             Console.WriteLine("Loan details cleared successfully.");
         }
+        //public void CompareLoans()
+        //{
+        //    Loan loan1 = new Loan();
+        //    Loan loan2 = new Loan();
+
+        //    Console.WriteLine("\n========== Enter Details for Loan 1 ==========");
+        //    CalculateEMI(loan1);
+
+        //    Console.WriteLine("\n========== Enter Details for Loan 2 ==========");
+        //    CalculateEMI(loan2);
+
+        //    Console.WriteLine("\n========== Loan 1 Summary ==========");
+        //    DisplayLoanSummary(loan1);
+
+        //    Console.WriteLine("\n========== Loan 2 Summary ==========");
+        //    DisplayLoanSummary(loan2);
+
+        //    Console.WriteLine("\n========== Comparison ==========");
+
+        //    // EMI Comparison
+        //    if (loan1.EMI < loan2.EMI)
+        //        Console.WriteLine($"{loan1.ApplicantName} has the lower EMI.");
+        //    else if (loan2.EMI < loan1.EMI)
+        //        Console.WriteLine($"{loan2.ApplicantName} has the lower EMI.");
+        //    else
+        //        Console.WriteLine("Both loans have the same EMI.");
+
+        //    // Interest Comparison
+        //    if (loan1.TotalInterest < loan2.TotalInterest)
+        //        Console.WriteLine($"{loan1.ApplicantName} has lower total interest.");
+        //    else if (loan2.TotalInterest < loan1.TotalInterest)
+        //        Console.WriteLine($"{loan2.ApplicantName} has lower total interest.");
+        //    else
+        //        Console.WriteLine("Both loans have the same total interest.");
+
+        //    // Repayment Comparison
+        //    if (loan1.TotalRepayment < loan2.TotalRepayment)
+        //        Console.WriteLine($"{loan1.ApplicantName} is the cheaper overall loan.");
+        //    else if (loan2.TotalRepayment < loan1.TotalRepayment)
+        //        Console.WriteLine($"{loan2.ApplicantName} is the cheaper overall loan.");
+        //    else
+        //        Console.WriteLine("Both loans cost the same.");
+        //}
     }
 }
