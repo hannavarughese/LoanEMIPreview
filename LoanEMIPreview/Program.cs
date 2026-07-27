@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoanEMIPreview
 {
@@ -25,40 +21,34 @@ namespace LoanEMIPreview
                 Console.WriteLine("3. Clear Details");
                 Console.WriteLine("4. Exit");
 
-                Console.Write("Enter your choice: ");
+                Console.Write("Enter your choice : ");
 
-                choice = Convert.ToInt32(Console.ReadLine());
+                if (!int.TryParse(Console.ReadLine(), out choice))
+                {
+                    Console.WriteLine("Invalid Choice");
+                    continue;
+                }
 
                 switch (choice)
                 {
                     case 1:
-
                         service.CalculateEMI(loan);
-
                         break;
 
                     case 2:
-
                         service.DisplayLoanSummary(loan);
-
                         break;
 
                     case 3:
-
                         service.ClearLoan(loan);
-
                         break;
 
                     case 4:
-
                         Console.WriteLine("Thank you!");
-
                         break;
 
                     default:
-
                         Console.WriteLine("Invalid Choice");
-
                         break;
                 }
 
