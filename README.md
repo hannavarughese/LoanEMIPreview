@@ -97,6 +97,10 @@ Total Repayment  : 615523.80
 ```
 
 ---
+## Test Cases
+
+<img width="245" height="293" alt="Testcase2" src="https://github.com/user-attachments/assets/47dd099c-2fc2-40ff-9bb2-48b7631d3a88" />
+<img width="262" height="350" alt="Testcase1" src="https://github.com/user-attachments/assets/13ddc7f0-6813-4fe5-9e14-76cf3e9c097a" />
 
 ## Validation
 
