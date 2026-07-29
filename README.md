@@ -1,39 +1,113 @@
-EX-002 – Loan EMI Preview
-Difficulty: Intermediate
-Estimated Time: 45–60 Minutes
-Business Scenario
-A finance company wants a desktop utility that helps customers estimate loan repayments before submitting an application.
-Functional Requirements
-Develop a menu-driven C# .NET Console Application.
-The application shall allow the user to:
-1.	Calculate EMI.
-2.	View loan summary.
-3.	Clear entered details.
-4.	Exit the application.
-The application shall collect the following information:
-•	Applicant Name
-•	Loan Amount
-•	Annual Interest Rate
-•	Loan Duration (Years)
-Business Rules
-•	Loan amount must be greater than zero.
-•	Interest rate cannot be negative.
-•	Loan duration must be at least one year.
-•	Display:
-o	Monthly EMI
-o	Total Interest
-o	Total Amount Payable
-Constraints
-•	The application shall continue executing until the user selects Exit.
-•	Invalid input shall not terminate the application.
-•	Display all monetary values with two decimal places.
-•	Do not use any external libraries.
-Expected Output
-Display:
-•	Applicant Name
-•	Loan Amount
-•	Monthly EMI
-•	Total Interest
-•	Total Repayment Amount
-Bonus Challenge
-Allow comparison of two different loan options.
+# Loan EMI Preview Calculator
+
+A menu-driven C# .NET Console Application that allows users to estimate loan repayments before applying for a loan. The application calculates the monthly EMI, total interest, and total repayment amount while validating user inputs.
+
+---
+
+## Features
+
+- Calculate Monthly EMI
+- View Loan Summary
+- Clear Entered Loan Details
+- Menu-Driven Console Interface
+- Input Validation
+- Displays monetary values with two decimal places
+
+---
+
+## Business Rules
+
+- Loan amount must be greater than zero.
+- Interest rate cannot be negative.
+- Loan duration must be at least one year.
+
+---
+
+## Technologies Used
+
+- C#
+- .NET Console Application
+- Visual Studio
+
+---
+
+## Project Structure
+
+```
+LoanEMIPreview
+│
+├── Program.cs         // Menu and application flow
+├── Loan.cs            // Loan model
+├── LoanService.cs     // EMI calculations and validation
+└── README.md
+```
+
+---
+
+## EMI Formula
+
+Monthly Interest Rate
+
+```
+r = Annual Interest Rate / (12 × 100)
+```
+
+Number of Monthly Payments
+
+```
+n = Loan Duration × 12
+```
+
+EMI Formula
+
+```
+EMI = P × r × (1 + r)^n
+      -------------------
+      ((1 + r)^n - 1)
+```
+
+Where:
+
+- P = Loan Amount
+- r = Monthly Interest Rate
+- n = Number of Monthly Payments
+
+---
+
+## Sample Output
+
+```
+========= Loan EMI Preview =========
+
+1. Calculate EMI
+2. View Loan Summary
+3. Clear Details
+4. Exit
+
+Enter Choice: 1
+
+Applicant Name : Hanna
+Loan Amount : 500000
+Interest Rate : 8.5
+Loan Duration : 5
+
+Monthly EMI      : 10258.73
+Total Interest   : 115523.80
+Total Repayment  : 615523.80
+```
+
+---
+
+## Validation
+
+- Invalid menu choices are handled.
+- Loan amount must be greater than zero.
+- Interest rate cannot be negative.
+- Loan duration must be at least one year.
+- Application continues until Exit is selected.
+
+---
+
+## Future Enhancement
+
+- Compare two different loan options.
